@@ -1,1 +1,1 @@
-# OTUS_Algoritm
+# OTUS_Algorithm
