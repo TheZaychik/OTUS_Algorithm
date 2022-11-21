@@ -7,6 +7,7 @@ import com.company.Task1.VectorArray;
 import com.company.Task1.MatrixArray;
 import com.company.Task2.ArrayListWrapper;
 import com.company.Task3.PriorityQueue;
+import com.company.Task4.SpaceArray;
 
 import java.util.Date;
 
@@ -103,10 +104,15 @@ public class Main {
         System.out.println(pq.dequeue());
     }
 
+    private static void Task4() {
+
+    }
+
     public static void main(String[] args) {
 //        Task1();
 //        Task2();
         Task3();
+//        Task4();
 
     }
 
