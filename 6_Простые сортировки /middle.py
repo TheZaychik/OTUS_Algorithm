@@ -48,7 +48,7 @@ class Sort:
             self.asg += 1
             p = self._binary_search(k, 0, j - 1)
             i = j - 1
-            while i >= p and self.mas[i] > k:
+            while i >= p:
                 self.mas[i + 1] = self.mas[i]
                 self.asg += 1
                 i -= 1
@@ -112,20 +112,20 @@ def test(n: int) -> None:
     # srt.insertion_shift()
     # print(f'InsertionShift N: {n} cmp: {srt.cmp} asg: {srt.asg} time: {current_milliseconds() - start}')
     #
-    # srt = Sort(mas_a)
-    # start = current_milliseconds()
-    # srt.insertion_binary()
-    # print(f'InsertionBinary N: {n} cmp: {srt.cmp} asg: {srt.asg} time: {current_milliseconds() - start}')
+    srt = Sort(mas_a)
+    start = current_milliseconds()
+    srt.insertion_binary()
+    print(f'InsertionBinary N: {n} cmp: {srt.cmp} asg: {srt.asg} time: {current_milliseconds() - start}')
 
     # srt = Sort(mas_a)
     # start = current_milliseconds()
     # srt.shell_sort_4()
     # print(f'Shell4 N: {n} cmp: {srt.cmp} asg: {srt.asg} time: {current_milliseconds() - start}')
     #
-    srt = Sort(mas_a)
-    start = current_milliseconds()
-    srt.shell_sort_8()
-    print(f'Shell8 N: {n} cmp: {srt.cmp} asg: {srt.asg} time: {current_milliseconds() - start}')
+    # srt = Sort(mas_a)
+    # start = current_milliseconds()
+    # srt.shell_sort_8()
+    # print(f'Shell8 N: {n} cmp: {srt.cmp} asg: {srt.asg} time: {current_milliseconds() - start}')
 
 
 if __name__ == '__main__':
