@@ -1,3 +1,6 @@
+from time import time
+
+
 class Node:
     def __init__(self, key: str, value: object = None) -> None:
         self.key = key
@@ -60,11 +63,33 @@ class HashTable:
                 pre.next = p.next
 
 
-if __name__ == '__main__':
+def get_random_word() -> str:
+    import random
+    import string
+
+    letters = string.ascii_letters
+    x = "".join(random.sample(letters, 5))
+    return x
+
+
+def time_test() -> None:
+    start = time()
     ht = HashTable(10)
-    ht.add('odin', 1)
-    print(ht.get('odin'))
-    ht.add('dva', 2)
-    print(ht.get('dva'))
-    ht.delete('dva')
-    print(ht.get('dva'))
+    for i in range(10000):
+        word = get_random_word()
+        ht.add(word, i)
+        ht.get(word)
+        ht.delete(word)
+
+    print(time() - start)
+
+
+if __name__ == '__main__':
+    # ht = HashTable(10)
+    # ht.add('odin', 1)
+    # print(ht.get('odin'))
+    # ht.add('dva', 2)
+    # print(ht.get('dva'))
+    # ht.delete('dva')
+    # print(ht.get('dva'))
+    time_test()
