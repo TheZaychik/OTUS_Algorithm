@@ -1,3 +1,6 @@
+import argparse
+
+
 def rle_encode(file: str):
     encoded = ''
     prev_c = ''
@@ -29,5 +32,12 @@ def rle_decode(file: str):
 
 
 if __name__ == '__main__':
-    print(rle_encode('somefile.dat'))
-    rle_decode('somefile.dat.arc')
+    parser = argparse.ArgumentParser(description='Сжимает/распаковывает файлы используя RLE алгоритм')
+    parser.add_argument('filedir', metavar='/var/file', type=str, help='путь до файла')
+    parser.add_argument('--arc', action='store_true', help='сжать файл')
+    parser.add_argument('--dearc', action='store_true', help='распаковать файл (.arc -> .arc.decoded)')
+    args = parser.parse_args()
+    if args.arc:
+        rle_encode(args.filedir)
+    elif args.dearc:
+        rle_decode(args.filedir)
