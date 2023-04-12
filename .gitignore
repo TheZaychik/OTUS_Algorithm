@@ -286,3 +286,9 @@ pip-selfcheck.json
 5_Битовая арифметика/chess_hw/.idea/
 
 9_Линейная сортировка/nums.bin
+
+22_Реализация вероятностного алгоритма/Parking_Violations_Issued_-_Fiscal_Year_2019.csv
+
+22_Реализация вероятностного алгоритма/hashes.csv
+
+*.csv
